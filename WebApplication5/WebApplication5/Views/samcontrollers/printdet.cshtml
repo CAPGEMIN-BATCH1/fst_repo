@@ -1,0 +1,37 @@
+﻿@model WebApplication5.Models.emp
+
+<h1> emp dept details</h1>
+
+<u1>
+    <li>  eid:@Model.eid     </li>
+    <li>  ename:@Model.ename   </li>
+    <li>  edisg:@Model.edesig    </li>
+    <li>  deptname:@Model.dtobj.dname   </li>
+    <li>  noofemp:@Model.dtobj.noemp    </li>
+
+
+</u1>
+<table border= "2px solid bile"  style=" background-color:aqua;" cellpadding= "10px">
+    <tr>
+        <td> empid</td>
+        <td> @Model.eid</td>
+    </tr>
+    <tr>
+        <td> empname</td>
+        <td> @Model.ename</td>
+    </tr>
+    <tr>
+        <td> empdesig</td>
+        <td> @Model.edesig</td>
+    </tr>
+    <tr>
+        <td> dept name</td>
+        <td> @Model.dtobj.dname</td>
+    </tr>
+    <tr>
+        <td> no of emp</td>
+        <td> @Model.dtobj.noemp</td>
+    </tr>
+
+
+</table>

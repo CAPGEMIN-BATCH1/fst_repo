@@ -1,0 +1,20 @@
+﻿@model string
+
+@if(!string.IsNullOrEmpty(Model))
+{
+    <strong>
+        welcome:@Model
+    </strong>
+    @Html.ActionLink("Remove cookie", "deletecookie")
+}
+else
+    {
+
+        @using (Html.BeginForm("createcookie", "sam"))
+        {
+        <label> enter your name:</label>
+        <input type="text" name="t1" /> <br />
+        <input type="submit" value="createcookie"  />
+        
+        }
+    }

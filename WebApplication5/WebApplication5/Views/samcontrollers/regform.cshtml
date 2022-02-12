@@ -1,0 +1,53 @@
+﻿@using (Html.BeginForm("regform", "sam"))
+{
+    <label>enter username :</label>
+    @Html.TextBox("username")
+    <br />
+    <br />
+
+    <label>enter password :</label>
+    @Html.Password("password")
+    <br />
+    <br />
+
+
+    <label>select Gender :</label>
+    @Html.RadioButton("Gender", "M")
+    <label> Male</label>
+    
+
+
+    @Html.RadioButton("Gender", "F")
+    <label>Female</label>
+    <br />
+    <br />
+
+    <label> select qualification:</label>
+    @Html.CheckBox("course", true)<label>Be/Btech</label>
+    @Html.CheckBox("course", false)<label>Mtech</label>
+    @Html.CheckBox("course", false)<label>PHd</label>
+    <br/>
+    <br/>
+
+    <label> select city:</label>
+    @Html.DropDownList("city", new List<SelectListItem>{
+    new SelectListItem{Text = "<<-select->>",Value="0"},
+    new SelectListItem{Text = "<hyd>",Value="1"},
+    new SelectListItem{Text = "<chennai>",Value="2"},
+    new SelectListItem{Text = "<pune>",Value="3"},
+    new SelectListItem{Text = "<banglr>",Value="4"},
+    })
+    <br/>
+    <br/>
+
+    <label> enter address:</label>
+    @Html.TextArea("address", new {cols = 25, rows = 5})
+
+    <br/>
+    <input type ="submit" value="Register" />
+    @Html.ActionLink("login","form2")
+
+
+
+
+}

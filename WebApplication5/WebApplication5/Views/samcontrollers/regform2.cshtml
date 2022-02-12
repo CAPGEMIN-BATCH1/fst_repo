@@ -1,0 +1,65 @@
+﻿@using (Html.BeginForm("regform2", "sam"))
+{
+    <label>enter Username :</label>
+    @Html.TextBox("username")
+    <br />
+    <br />
+
+    <label>enter Email Id :</label>
+    @Html.TextBox("Email Id")
+    <br />
+    <br />
+
+
+    <label>enter Contact no :</label>
+    @Html.TextBox("Contact no")
+    <br />
+    <br />
+
+
+    <label>select Gender :</label>
+    @Html.RadioButton("Gender", "M")
+    <label> Male</label>
+
+
+
+    @Html.RadioButton("Gender", "F")
+    <label>Female</label>
+    <br />
+    <br />
+
+    <label> select Qualification:</label>
+    @Html.DropDownList("Qualification", new List<SelectListItem>{
+    new SelectListItem{Text = "<<-select->>",Value="0"},
+    new SelectListItem{Text = "<Be/Btech>",Value="1"},
+    new SelectListItem{Text = "<Mtech>",Value="2"},
+    new SelectListItem{Text = "<MBA>",Value="3"},
+    new SelectListItem{Text = "<Mca>",Value="4"},
+    })
+    <br />
+    <br />
+
+    <label> select Job type:</label>
+
+    @Html.CheckBox("type", false)<label>online</label>
+    @Html.CheckBox("type", false)<label>offline</label>
+    <br />
+    <br />
+
+    <label> select Job location:</label>
+    @Html.DropDownList("location", new List<SelectListItem>{
+    new SelectListItem{Text = "<<-select->>",Value="0"},
+    new SelectListItem{Text = "<hyd>",Value="1"},
+    new SelectListItem{Text = "<chennai>",Value="2"},
+    new SelectListItem{Text = "<pune>",Value="3"},
+    new SelectListItem{Text = "<banglr>",Value="4"},
+    })
+    <br />
+    <br />
+
+    <label> enter Residential address:</label>
+    @Html.TextArea("address", new { cols = 30, rows = 6 })
+
+    <br />
+    <input type="submit" value="Register" />
+}

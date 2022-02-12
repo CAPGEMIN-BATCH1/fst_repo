@@ -1,0 +1,33 @@
+﻿@model WebApplication5.Models.practice
+
+@using (Html.BeginForm("pract", "sam", FormMethod.Post))
+{
+    <label>enter fst name:</label>
+    @Html.TextBoxFor(x => x.pname)
+    @Html.ValidationMessageFor(x => x.pname)
+    <br />
+
+    <label>  enter last name:</label>
+    @Html.TextBoxFor(x => x.plname)
+    @Html.ValidationMessageFor(x => x.plname)
+    <br />
+
+    <label>enter Emailid:</label>
+    @Html.TextBoxFor(x => x.pmailid)
+    @Html.ValidationMessageFor(x => x.pmailid)
+    <br />
+
+    <label>enter ph no:</label>
+    @Html.TextBoxFor(x => x.pcno)
+    @Html.ValidationMessageFor(x => x.pcno)
+    <br />
+
+    <label>enter acc nub:</label>
+    @Html.TextBoxFor(x => x.pacno)
+    @Html.ValidationMessageFor(x => x.pacno)
+    <br />
+
+    <input type="submit" value="login" />
+    @Html.ValidationSummary(false)
+
+}

@@ -1,0 +1,14 @@
+﻿@model WebApplication5.Models.userdet
+<h2> model binding ddl</h2>
+
+@using (Html.BeginForm("dispdd1", "sam", FormMethod.Post))
+{
+    <label>  enter coursename:</label>
+    @Html.DropDownList("selectcname", new SelectList(Enum.GetValues(typeof(coursename))), "---select coursename--")
+    <input type ="submit" value="submit"/>
+
+
+}
+<b>
+    you have selected:@ViewData["cname"]
+</b>

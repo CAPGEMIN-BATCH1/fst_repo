@@ -1,0 +1,23 @@
+﻿@model WebApplication5.Models.satyastu
+
+@using (Html.BeginForm("form2", "sam", FormMethod.Post))
+{
+    <label>  enter faname:</label>
+    @Html.TextBoxFor(x => x.fname)
+    <br />
+    <label>  enter lname:</label>
+    @Html.TextBoxFor(x => x.lname)
+    <br />
+    <label> fresher?:</label>
+    @Html.CheckBoxFor(m => m.workexp)
+    <br />
+
+    <input type="submit" value="submit"/>
+
+} 
+<b>
+    
+        fname:@ViewData["fname"] <br />
+        lname:@ViewData["lname"] <br />
+        work experiance:@ViewData["workexp"]
+</b>

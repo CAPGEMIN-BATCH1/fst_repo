@@ -1,0 +1,23 @@
+﻿@model WebApplication5.Views.sam.logindetails
+
+@using (Html.BeginForm("form3", "sam", FormMethod.Post))
+{
+    <label>  enter username:</label>
+    @Html.TextBoxFor(x => x.username)
+    @*Html.ValidationMessageFor(x => x.username)*@
+    <br />
+
+    <label>  enter Password:</label>
+    @Html.PasswordFor(x => x.Password)
+    @*Html.ValidationMessageFor(x => x.Password)*@
+    <br />
+
+    <label> Emailid:</label>
+    @Html.TextBoxFor(x => x.mailid)
+    @*Html.ValidationMessageFor(x => x.mailid)*@
+    <br />
+
+    <input type="submit" value="login" />
+    @Html.ValidationSummary(false)
+
+}

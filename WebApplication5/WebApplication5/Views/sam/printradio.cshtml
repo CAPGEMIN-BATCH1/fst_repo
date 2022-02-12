@@ -1,0 +1,35 @@
+﻿@model WebApplication5.Models.userdata
+
+@using (Html.BeginForm("printradio", "sam", FormMethod.Post))
+{
+    <label>select jobtype:</label>
+    @Html.RadioButtonFor(x => x.jobtype, "fulltime")
+    <label> fulltime</label>
+  
+    
+
+    <label> select jobmode:</label>
+    @Html.RadioButtonFor(x => x.jobtype, "parttime")
+    <label> parttime</label>
+  
+    <br />
+
+    <label>select jobmode:</label>
+    @Html.RadioButtonFor(x => x.jobmode, "online")
+    <label> online</label>
+ 
+    
+
+    <label> select jobmode:</label>
+    @Html.RadioButtonFor(x => x.jobmode, "offline")
+    <label> offline</label>
+   
+    <br />
+    <br/>
+
+   
+
+    <input type="submit" value="submit" />
+   
+
+}
